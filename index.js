@@ -16,6 +16,10 @@ admin.initializeApp({
 // In-memory store (OK for personal project)
 const pairs = {}; // { code: { a: tokenA, b: tokenB } }
 
+app.get("/", (req, res) => {
+  res.send("You can Tap to Ping")
+})
+
 // Register device token
 app.post("/register", (req, res) => {
   const { token } = req.body;
